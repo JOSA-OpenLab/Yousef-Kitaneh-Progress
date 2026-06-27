@@ -7,13 +7,18 @@ workingonit
 #### Test Workflow & `act`
 
 I worked on [LeftHookRoll](https://github.com/Andary22/LeftHookRoll) alongside 2
-other developers, each of us on a different operating system
-(debian/fedora/macOS) and while I enforced a testing practice, it was a manual
-process built on responsibility and trust. It never occured to me to automate
-this process, I even already set up a CD workflow for the documentation of this
-project ([check it out here](https://andary22.github.io/LeftHookRoll/) ;p), so
-this was a great opportunity to take advantage of existing tests to integrate
-them into a CI workflow.
+other developers, each of us on a different operating system (debian/fedora) and
+while I enforced a testing practice, it was a manual process built on
+responsibility and trust. It never occured to me to automate this process, I
+even already set up a CD workflow for the documentation of this project
+([check it out here](https://andary22.github.io/LeftHookRoll/) ;p), so this was
+a great opportunity to take advantage of existing tests to integrate them into a
+CI workflow.
+
+Initially I tried setting up a macOS test, and after I ran act locally it
+worked, but on the GitHub actions runner, it kept failing, this was because my
+local macOS runner was actually just an ubuntu runner with a macOS image, so
+that was a valuable lesson.
 
 > [!note] Aside
 >
@@ -27,23 +32,6 @@ them into a CI workflow.
 ```bash
 › ./bin/act -W '.github/workflows/ci.yml'
 
-| ========================================
-| Test Summary
-| ========================================
-| 
-| [2026-06-27 21:05:37] Test Summary
-| Total:  4
-| Passed: 4
-| Failed: 0
-| 
-| [2026-06-27 21:05:37] Summary: 4/4 tests passed
-| All tests passed!
-[CI/test-macos]   ✅  Success - Main Run Tests [10.874722996s]
-[CI/test-macos] ⭐ Run Complete job
-[CI/test-macos] Cleaning up container for job test-macos
-[CI/test-macos]   ✅  Success - Complete job
-[CI/test-macos] 🏁  Job succeeded
-...
 | ========================================
 | Test Summary
 | ========================================
