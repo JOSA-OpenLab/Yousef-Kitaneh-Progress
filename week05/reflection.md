@@ -2,7 +2,12 @@
 
 #### Unit Tests PR
 
-workingonit
+Inspired by last week's euclidean division PR review, I decided to check out the
+rust compiler builtins, look for untested code branches and add coverage for
+them. I added
+[this PR](https://github.com/rust-lang/compiler-builtins/pull/1225) to do that.
+I used llvm-cov to find untested branches, approach and reasoning explained in
+the PR.
 
 #### Test Workflow & `act`
 
