@@ -1,0 +1,12 @@
+✔ Scanned for vulnerabilities     [8 vulnerability matches]  
+   ├── by severity: 0 critical, 2 high, 5 medium, 1 low, 0 negligible
+   └── by status:   8 fixed, 0 not-fixed, 0 ignored 
+NAME        INSTALLED  FIXED IN  TYPE    VULNERABILITY        SEVERITY  EPSS         RISK   
+setuptools  66.1.1     70.0.0    python  GHSA-cx63-2mw6-8hw5  High      1.9% (77th)  1.5    
+setuptools  66.1.1     78.1.1    python  GHSA-5rjg-fvgr-3xxf  High      1.5% (70th)  1.1    
+pip         23.0.1     23.3      python  GHSA-mq26-g339-26xf  Medium    0.5% (37th)  0.3    
+pip         23.0.1     25.3      python  GHSA-4xh5-x5gv-qwph  Medium    0.4% (35th)  0.2    
+pip         23.0.1     26.1.2    python  GHSA-wf93-45jw-7689  Medium    0.3% (23rd)  0.2    
+pip         23.0.1     26.0      python  GHSA-6vgw-5pg2-w6jp  Low       0.4% (31st)  < 0.1  
+pip         23.0.1     26.1      python  GHSA-jp4c-xjxw-mgf9  Medium    0.1% (3rd)   < 0.1  
+pip         23.0.1     26.1      python  GHSA-58qw-9mgm-455v  Medium    0.1% (4th)   < 0.1
