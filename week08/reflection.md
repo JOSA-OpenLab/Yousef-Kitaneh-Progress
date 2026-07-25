@@ -100,4 +100,36 @@ optimization). I ended up profiling a panic based bug, which I covered earlier.
 
 #### attempt 2:
 
+![rustfmt_flamegraph_2.svg](rustfmt_flamegraph_2.svg) I next wanted to profile a
+parsing project, so I turned to
+[rust-fmt](https://github.com/rust-lang/rustfmt), and ran `cargo fmt --check` on
+the largest repo I could find, which was the rust analyzer repo. I wont even
+attempt to debug this monster myself, but this graph helps me see that the
+program mainly spends its time in the `walk_mod_items` function (49.3% of the
+samples), and the `visit_crate` functions. from this view, I can infer that the
+`walk_mod_items` function visits the functions, code blocks, statements, while
+the `visit_crate` constructs an ast formed from submodules (i.e. forming a
+directory tree of the project)
+
+one hell of a pretty graph though.
+
 #### attempt 3:
+
+![manim_flamegraph_3.svg](manim_flamegraph_3.svg) enough rust & C graphs now, I
+want to take a look at a higher level language. lets use `py-spy`.
+
+I always enjoyed the content of 3b1b, and the engine he uses to animate his
+videos is called `manim`, and it's open source. Lets profile it.
+
+here we can see that the main lifetime of the program is spent mainly in the
+`play` function, which seems to be alternating between `ineterpolate` and
+`progress_through_animations` and `update_frame`.
+
+the flame graph is also "polluted" by initalizing dependencies, in fact, it was
+almost a 50/50 (60/40 to be exact) split between our program and the initalizing
+dependencies stage.
+
+digging deeper into the graph, we can see that `interpolate_mobject` is
+iterating over a potentially large list of objects, and performing an operation
+which could be vectorized via NumPy and potentially take advantage of SIMD
+instructions.
