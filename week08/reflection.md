@@ -1,6 +1,6 @@
 ### Week08: Reflection
 
-#### Profile and fix, Use a real debugger.
+#### Profiling and fixing, while using a real debugger.
 
 I really wanted to find a bottleneck bug, and held a hypothesis that I should
 look in math related projects (such as the DSP project `scope-tui`), since that
@@ -82,23 +82,21 @@ than being a hindrance.
 
 [I opened a PR to patch my fix in.](https://github.com/alemidev/scope-tui/pull/24)
 
-#### Task 2: Find an N+1
+#### Finding an N+1
 
 I was unable to find an N+1 in time, but it is definitely something I will keep
 an eye out for in the future.
 
-#### Read 3 real flame graphs
+#### Reading 3 real flame graphs
 
 #### attempt 1:
 
-I found this [very cool project](https://github.com/alemidev/scope-tui) and
-assumed it must have some heavy math in the background, so my initial instinct
-was to profile it and hopefully fix a bottlneck, but it is actually quite
-optimized, and most of the heavy blocks are UI rendering blocks (which I don't
-think need optimization). I ended up profiling a panic based bug, which I
-covered earlier.
-
-[scope_flamegraph_1.svg](scope_flamegraph_1.svg)
+![scope_flamegraph_1.svg](scope_flamegraph_1.svg) I found this
+[very cool project](https://github.com/alemidev/scope-tui) and assumed it must
+have some heavy math in the background, so my initial instinct was to profile it
+and hopefully fix a bottlneck, but it is actually quite optimized, and most of
+the heavy blocks are UI rendering blocks (which I don't think need
+optimization). I ended up profiling a panic based bug, which I covered earlier.
 
 #### attempt 2:
 
