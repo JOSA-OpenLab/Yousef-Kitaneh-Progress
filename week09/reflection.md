@@ -1,7 +1,7 @@
 ### week09: reflection
 
-The two repositories I worked focused on this week were [esp-csi-tui-rs] and
-[tbd]
+The two repositories I worked focused on this week were
+[esp-csi-tui-rs](https://github.com/42-DDN/esp-csi-tui-rs) and [tbd]
 
 #### esp-csi-tui-rs
 
@@ -23,6 +23,19 @@ can see how useful it is for large projects such as the rust language for
 example.
 
 #### Audit and Contribute:
+
+I wanted to contribute to the ratatui project this week, and this is my initial
+audit:
+
+- They have fully completed the community standards checklist
+- They use the MIT license.
+- They allow AI generated contributions, but it must meet the same standards as
+  human contributions, and the code must be compatible with the license, as well
+  as be fully disclosed.
+- They have a local CI runner in the form of `cargo xtask ci`
+- They use commit signing
+- They have a very neat
+  [ARCHITECTURE.md](https://github.com/ratatui/ratatui/blob/main/ARCHITECTURE.md)
 
 //WIP
 
