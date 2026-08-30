@@ -62,4 +62,4 @@ and adopt it as a hobby if not as a career.
 I will mainly need mentorship in the hardware/embedded side of things, I am
 currently going through a roadmap for embedded engineering, and it would be nice
 to have someone to keep me on track and help me face reality and hold me
-responsible for my goals
+responsible for my goals.
