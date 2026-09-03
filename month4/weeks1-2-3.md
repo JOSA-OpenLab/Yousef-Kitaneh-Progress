@@ -20,8 +20,9 @@ I've been tinkering around with an UNO R3 arduino board, to prepare more for the
 "traditonal" embedded experience, i.e., working with C/C++ in favor of Rust.
 I've been also revising my electric physics courses & labs, and want to start
 working with heavier and more powerful microcontrollers, but I will probably
-need to do that with the help of virtualizers. Specifically, I want to begin
-working with QEMU and Wokwi environments.
+need to do that with the help of virtualizers (most boards are either too
+expensive or not readily available). Specifically, I want to begin working with
+QEMU and Wokwi environments.
 
 #### Branching out: Compilers and Computational Linguistics
 
